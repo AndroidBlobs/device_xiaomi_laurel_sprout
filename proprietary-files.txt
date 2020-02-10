@@ -1,14 +1,14 @@
 
 # ADSP
 vendor/bin/adsprpcd
-vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
+vendor/lib/libadsp_default_listener.so
 vendor/lib/libfastcvdsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
-vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
+vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
@@ -18,8 +18,6 @@ vendor/lib64/libsdsprpc.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 vendor/lib/rfsa/adsp/dirac_resource.dar
-vendor/lib/rfsa/adsp/libVC1Dec.so
-vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdirac-capiv2.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
@@ -28,6 +26,8 @@ vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
+vendor/lib/rfsa/adsp/libVC1Dec.so
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/misound_res.bin
 
 # ANT
@@ -62,9 +62,9 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
--vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libaudioparsers.so
+-vendor/lib/libaudio_log_utils.so
 vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
@@ -80,9 +80,9 @@ vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
--vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioparsers.so
+-vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libqtigef.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libaudiopreprocessing.so
@@ -91,6 +91,7 @@ vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
 # Audio-ACDB
+vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Codec_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_General_cal.acdb
@@ -126,11 +127,21 @@ vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
-vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/QRD_India/QRD_India_Bluetooth_cal.acdb
+vendor/etc/acdbdata/QRD_India/QRD_India_Codec_cal.acdb
+vendor/etc/acdbdata/QRD_India/QRD_India_General_cal.acdb
+vendor/etc/acdbdata/QRD_India/QRD_India_Global_cal.acdb
+vendor/etc/acdbdata/QRD_India/QRD_India_Handset_cal.acdb
+vendor/etc/acdbdata/QRD_India/QRD_India_Hdmi_cal.acdb
+vendor/etc/acdbdata/QRD_India/QRD_India_Headset_cal.acdb
+vendor/etc/acdbdata/QRD_India/QRD_India_Speaker_cal.acdb
+vendor/etc/acdbdata/QRD_India/QRD_India_workspaceFile.qwsp
 
 # Audio-Hardware
 vendor/lib/hw/audio.primary.default.so
 vendor/lib/hw/audio.primary.trinket.so
+vendor/lib/hw/audio.r_submix.default.so
+vendor/lib/hw/audio.usb.default.so
 vendor/lib/libtinycompress_vendor.so
 vendor/lib/soundfx/libqcompostprocbundle.so
 vendor/lib/soundfx/libqcomvisualizer.so
@@ -138,6 +149,8 @@ vendor/lib/soundfx/libqcomvoiceprocessing.so
 vendor/lib/soundfx/libvolumelistener.so
 vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.trinket.so
+vendor/lib64/hw/audio.r_submix.default.so
+vendor/lib64/hw/audio.usb.default.so
 vendor/lib64/libtinycompress_vendor.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
 vendor/lib64/soundfx/libqcomvisualizer.so
@@ -165,10 +178,10 @@ vendor/lib64/libbtnv.so
 
 # CDSP
 vendor/bin/cdsprpcd
-vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
-vendor/lib64/libcdsp_default_listener.so
+vendor/lib/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
+vendor/lib64/libcdsp_default_listener.so
 
 # CNE
 etc/permissions/cneapiclient.xml
@@ -289,20 +302,15 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 # Camera
 lib64/libseemore.so
 vendor/lib/hw/camera.trinket.so
-vendor/lib/libFaceGrade.so
-vendor/lib/libSNPE.so
-vendor/lib/libVDClearShot.so
-vendor/lib/libVDSuperPhotoAPI.so
-vendor/lib/libXMFD_AgeGender.so
-vendor/lib/lib_lowlight.so
-vendor/lib/libalLDC.so
 vendor/lib/libalhLDC.so
+vendor/lib/libalLDC.so
 vendor/lib/libbase64.so
 vendor/lib/libc++_shared.so
 vendor/lib/libcamera_scene.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libdepthmapwrapper.so
+vendor/lib/libFaceGrade.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libgui_vendor.so
 vendor/lib/libhal_dbg.so
@@ -315,8 +323,8 @@ vendor/lib/libmmcamera_sonyimx135_eeprom.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmlib2d_interface.so
-vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
+vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmpbase.so
 vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so
@@ -324,17 +332,22 @@ vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libseemore.so
+vendor/lib/libSNPE.so
+vendor/lib/libsnsapi.so
+vendor/lib/libsnsdiaglog.so
 vendor/lib/libsns_device_mode_stub.so
 vendor/lib/libsns_fastRPC_util.so
 vendor/lib/libsns_low_lat_stream_stub.so
-vendor/lib/libsnsapi.so
-vendor/lib/libsnsdiaglog.so
 vendor/lib/libstdc++.so
 vendor/lib/libswvdec.so
 vendor/lib/libsymphony-cpu.so
 vendor/lib/libsymphonypower.so
+vendor/lib/libVDClearShot.so
+vendor/lib/libVDSuperPhotoAPI.so
 vendor/lib/libvideoutils.so
 vendor/lib/libvidhance.so
+vendor/lib/libXMFD_AgeGender.so
+vendor/lib/lib_lowlight.so
 vendor/lib/mibokeh_660_opencl.bin
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib/vendor.qti.hardware.camera.device@3.2.so
@@ -342,11 +355,11 @@ vendor/lib64/libbase64.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libseemore.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
-vendor/lib64/libsnsapi.so
-vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libswvdec.so
 vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
@@ -394,9 +407,6 @@ vendor/lib/libchromatix_csidtg_cpp_preview.so
 vendor/lib/libchromatix_csidtg_postproc.so
 vendor/lib/libchromatix_csidtg_preview.so
 vendor/lib/libchromatix_csidtg_zsl_preview.so
-vendor/lib/libchromatix_factory_laurus_gc2375_qtech_HDR_cpp_snapshot.so
-vendor/lib/libchromatix_factory_laurus_gc2375_qtech_HDR_snapshot.so
-vendor/lib/libchromatix_factory_laurus_gc2375_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_gc2375_qtech_common.so
 vendor/lib/libchromatix_factory_laurus_gc2375_qtech_cpp_ds_chromatix.so
 vendor/lib/libchromatix_factory_laurus_gc2375_qtech_cpp_liveshot.so
@@ -409,6 +419,9 @@ vendor/lib/libchromatix_factory_laurus_gc2375_qtech_cpp_video_weixin.so
 vendor/lib/libchromatix_factory_laurus_gc2375_qtech_default_preview_bu64297.so
 vendor/lib/libchromatix_factory_laurus_gc2375_qtech_default_video.so
 vendor/lib/libchromatix_factory_laurus_gc2375_qtech_default_video_bu64297.so
+vendor/lib/libchromatix_factory_laurus_gc2375_qtech_HDR_cpp_snapshot.so
+vendor/lib/libchromatix_factory_laurus_gc2375_qtech_HDR_snapshot.so
+vendor/lib/libchromatix_factory_laurus_gc2375_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_gc2375_qtech_hht_cpp_snapshot.so
 vendor/lib/libchromatix_factory_laurus_gc2375_qtech_panorama_cpp_snapshot.so
 vendor/lib/libchromatix_factory_laurus_gc2375_qtech_panorama_snapshot.so
@@ -449,7 +462,6 @@ vendor/lib/libchromatix_factory_laurus_imx582_qtech_zsl_preview_3a.so
 vendor/lib/libchromatix_factory_laurus_imx582_qtech_zsl_video_3a.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_48M_cpp_snapshot.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_48M_zsl_preview_dw9800w.so
-vendor/lib/libchromatix_factory_laurus_imx586_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_common.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_cpp_ds_chromatix.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_cpp_hfr_120.so
@@ -465,6 +477,7 @@ vendor/lib/libchromatix_factory_laurus_imx586_qtech_cpp_video_weixin.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_default_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_default_video.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_default_video_dw9800w.so
+vendor/lib/libchromatix_factory_laurus_imx586_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_hfr_120.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_hfr_120_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_hfr_60.so
@@ -482,7 +495,6 @@ vendor/lib/libchromatix_factory_laurus_imx586_qtech_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_qtech_zsl_video_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_48M_cpp_snapshot.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_48M_zsl_preview_dw9800w.so
-vendor/lib/libchromatix_factory_laurus_imx586_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_common.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_cpp_ds_chromatix.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_cpp_hfr_120.so
@@ -498,6 +510,7 @@ vendor/lib/libchromatix_factory_laurus_imx586_sunny_cpp_video_weixin.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_default_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_default_video.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_default_video_dw9800w.so
+vendor/lib/libchromatix_factory_laurus_imx586_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_hfr_120.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_hfr_120_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_hfr_60.so
@@ -513,9 +526,6 @@ vendor/lib/libchromatix_factory_laurus_imx586_sunny_video_weixin.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_weixin_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_imx586_sunny_zsl_video_dw9800w.so
-vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_HDR_cpp_snapshot.so
-vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_HDR_snapshot.so
-vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_common.so
 vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_cpp_ds_chromatix.so
 vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_cpp_liveshot.so
@@ -528,6 +538,9 @@ vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_cpp_video_weixin.so
 vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_default_preview_bu64297.so
 vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_default_video.so
 vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_default_video_bu64297.so
+vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_HDR_cpp_snapshot.so
+vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_HDR_snapshot.so
+vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_hht_cpp_snapshot.so
 vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_panorama_cpp_snapshot.so
 vendor/lib/libchromatix_factory_laurus_ov02a10_sunny_panorama_snapshot.so
@@ -619,9 +632,6 @@ vendor/lib/libchromatix_factory_laurus_s5k4h7_sunny_weixin_zsl_preview_dw9800w.s
 vendor/lib/libchromatix_factory_laurus_s5k4h7_sunny_zsl_preview_bu64297.so
 vendor/lib/libchromatix_factory_laurus_s5k4h7_sunny_zsl_video_bu64297.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_32M_cpp_snapshot.so
-vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_HDR_cpp_snapshot.so
-vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_HDR_snapshot.so
-vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_common.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_cpp_ds_chromatix.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_cpp_hfr_120.so
@@ -642,6 +652,9 @@ vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_default_video_bu64297.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_faceunlock_cpp_preview.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_faceunlock_preview.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_faceunlock_zsl_preview_dw9800w.so
+vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_HDR_cpp_snapshot.so
+vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_HDR_snapshot.so
+vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_hfr_120.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_hfr_120_bu64297.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_hfr_60.so
@@ -660,9 +673,6 @@ vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_weixin_zsl_preview_dw9800w.s
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_zsl_preview_bu64297.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_ofilm_zsl_video_bu64297.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_32M_cpp_snapshot.so
-vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_HDR_cpp_snapshot.so
-vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_HDR_snapshot.so
-vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_common.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_cpp_ds_chromatix.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_cpp_hfr_120.so
@@ -683,6 +693,9 @@ vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_default_video_bu64297.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_faceunlock_cpp_preview.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_faceunlock_preview.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_faceunlock_zsl_preview_dw9800w.so
+vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_HDR_cpp_snapshot.so
+vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_HDR_snapshot.so
+vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_hfr_120.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_hfr_120_bu64297.so
 vendor/lib/libchromatix_factory_laurus_s5kgd1_sunny_hfr_60.so
@@ -1090,9 +1103,9 @@ vendor/lib/libchromatix_imx318_cpp_video.so
 vendor/lib/libchromatix_imx318_cpp_video_4k.so
 vendor/lib/libchromatix_imx318_cpp_video_4k_raw_hdr.so
 vendor/lib/libchromatix_imx318_default_video.so
-vendor/lib/libchromatix_imx318_full_snapshot_raw_hdr_lc898212xd.so
 vendor/lib/libchromatix_imx318_fullsize_preview_lc898212xd.so
 vendor/lib/libchromatix_imx318_fullsize_video_lc898212xd.so
+vendor/lib/libchromatix_imx318_full_snapshot_raw_hdr_lc898212xd.so
 vendor/lib/libchromatix_imx318_hfr_120.so
 vendor/lib/libchromatix_imx318_hfr_120_lc898212xd.so
 vendor/lib/libchromatix_imx318_hfr_240.so
@@ -1296,9 +1309,6 @@ vendor/lib/libchromatix_imx519_preview.so
 vendor/lib/libchromatix_imx519_snapshot.so
 vendor/lib/libchromatix_imx519_snapshot_raw_hdr.so
 vendor/lib/libchromatix_imx519_video_4k.so
-vendor/lib/libchromatix_india_laurus_gc2375_qtech_HDR_cpp_snapshot.so
-vendor/lib/libchromatix_india_laurus_gc2375_qtech_HDR_snapshot.so
-vendor/lib/libchromatix_india_laurus_gc2375_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_gc2375_qtech_common.so
 vendor/lib/libchromatix_india_laurus_gc2375_qtech_cpp_ds_chromatix.so
 vendor/lib/libchromatix_india_laurus_gc2375_qtech_cpp_liveshot.so
@@ -1311,6 +1321,9 @@ vendor/lib/libchromatix_india_laurus_gc2375_qtech_cpp_video_weixin.so
 vendor/lib/libchromatix_india_laurus_gc2375_qtech_default_preview_bu64297.so
 vendor/lib/libchromatix_india_laurus_gc2375_qtech_default_video.so
 vendor/lib/libchromatix_india_laurus_gc2375_qtech_default_video_bu64297.so
+vendor/lib/libchromatix_india_laurus_gc2375_qtech_HDR_cpp_snapshot.so
+vendor/lib/libchromatix_india_laurus_gc2375_qtech_HDR_snapshot.so
+vendor/lib/libchromatix_india_laurus_gc2375_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_gc2375_qtech_hht_cpp_snapshot.so
 vendor/lib/libchromatix_india_laurus_gc2375_qtech_panorama_cpp_snapshot.so
 vendor/lib/libchromatix_india_laurus_gc2375_qtech_panorama_snapshot.so
@@ -1351,7 +1364,6 @@ vendor/lib/libchromatix_india_laurus_imx582_qtech_zsl_preview_3a.so
 vendor/lib/libchromatix_india_laurus_imx582_qtech_zsl_video_3a.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_48M_cpp_snapshot.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_48M_zsl_preview_dw9800w.so
-vendor/lib/libchromatix_india_laurus_imx586_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_common.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_cpp_ds_chromatix.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_cpp_hfr_120.so
@@ -1367,6 +1379,7 @@ vendor/lib/libchromatix_india_laurus_imx586_qtech_cpp_video_weixin.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_default_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_default_video.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_default_video_dw9800w.so
+vendor/lib/libchromatix_india_laurus_imx586_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_hfr_120.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_hfr_120_dw9800w.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_hfr_60.so
@@ -1382,9 +1395,6 @@ vendor/lib/libchromatix_india_laurus_imx586_qtech_video_weixin.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_weixin_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_imx586_qtech_zsl_video_dw9800w.so
-vendor/lib/libchromatix_india_laurus_ov02a10_sunny_HDR_cpp_snapshot.so
-vendor/lib/libchromatix_india_laurus_ov02a10_sunny_HDR_snapshot.so
-vendor/lib/libchromatix_india_laurus_ov02a10_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_common.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_cpp_ds_chromatix.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_cpp_liveshot.so
@@ -1397,6 +1407,9 @@ vendor/lib/libchromatix_india_laurus_ov02a10_sunny_cpp_video_weixin.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_default_preview_bu64297.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_default_video.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_default_video_bu64297.so
+vendor/lib/libchromatix_india_laurus_ov02a10_sunny_HDR_cpp_snapshot.so
+vendor/lib/libchromatix_india_laurus_ov02a10_sunny_HDR_snapshot.so
+vendor/lib/libchromatix_india_laurus_ov02a10_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_hht_cpp_snapshot.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_panorama_cpp_snapshot.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_panorama_snapshot.so
@@ -1409,9 +1422,6 @@ vendor/lib/libchromatix_india_laurus_ov02a10_sunny_video_weixin.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_weixin_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_zsl_preview_bu64297.so
 vendor/lib/libchromatix_india_laurus_ov02a10_sunny_zsl_video_bu64297.so
-vendor/lib/libchromatix_laurus_gc2375_qtech_HDR_cpp_snapshot.so
-vendor/lib/libchromatix_laurus_gc2375_qtech_HDR_snapshot.so
-vendor/lib/libchromatix_laurus_gc2375_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_laurus_gc2375_qtech_common.so
 vendor/lib/libchromatix_laurus_gc2375_qtech_cpp_ds_chromatix.so
 vendor/lib/libchromatix_laurus_gc2375_qtech_cpp_liveshot.so
@@ -1424,6 +1434,9 @@ vendor/lib/libchromatix_laurus_gc2375_qtech_cpp_video_weixin.so
 vendor/lib/libchromatix_laurus_gc2375_qtech_default_preview_bu64297.so
 vendor/lib/libchromatix_laurus_gc2375_qtech_default_video.so
 vendor/lib/libchromatix_laurus_gc2375_qtech_default_video_bu64297.so
+vendor/lib/libchromatix_laurus_gc2375_qtech_HDR_cpp_snapshot.so
+vendor/lib/libchromatix_laurus_gc2375_qtech_HDR_snapshot.so
+vendor/lib/libchromatix_laurus_gc2375_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_laurus_gc2375_qtech_hht_cpp_snapshot.so
 vendor/lib/libchromatix_laurus_gc2375_qtech_panorama_cpp_snapshot.so
 vendor/lib/libchromatix_laurus_gc2375_qtech_panorama_snapshot.so
@@ -1495,7 +1508,6 @@ vendor/lib/libchromatix_laurus_imx582_qtech_zsl_video_4k.so
 vendor/lib/libchromatix_laurus_imx582_qtech_zsl_video_weixin.so
 vendor/lib/libchromatix_laurus_imx586_qtech_48M_cpp_snapshot.so
 vendor/lib/libchromatix_laurus_imx586_qtech_48M_zsl_preview_dw9800w.so
-vendor/lib/libchromatix_laurus_imx586_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_laurus_imx586_qtech_common.so
 vendor/lib/libchromatix_laurus_imx586_qtech_cpp_ds_chromatix.so
 vendor/lib/libchromatix_laurus_imx586_qtech_cpp_hfr_120.so
@@ -1511,6 +1523,7 @@ vendor/lib/libchromatix_laurus_imx586_qtech_cpp_video_weixin.so
 vendor/lib/libchromatix_laurus_imx586_qtech_default_preview_dw9800w.so
 vendor/lib/libchromatix_laurus_imx586_qtech_default_video.so
 vendor/lib/libchromatix_laurus_imx586_qtech_default_video_dw9800w.so
+vendor/lib/libchromatix_laurus_imx586_qtech_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_laurus_imx586_qtech_hfr_120.so
 vendor/lib/libchromatix_laurus_imx586_qtech_hfr_120_dw9800w.so
 vendor/lib/libchromatix_laurus_imx586_qtech_hfr_60.so
@@ -1698,9 +1711,6 @@ vendor/lib/libchromatix_laurus_indian_s5k4h7_sunny_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_indian_s5k4h7_sunny_zsl_preview_torch.so
 vendor/lib/libchromatix_laurus_indian_s5k4h7_sunny_zsl_video.so
 vendor/lib/libchromatix_laurus_indian_s5k4h7_sunny_zsl_video_weixin.so
-vendor/lib/libchromatix_laurus_ov02a10_sunny_HDR_cpp_snapshot.so
-vendor/lib/libchromatix_laurus_ov02a10_sunny_HDR_snapshot.so
-vendor/lib/libchromatix_laurus_ov02a10_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_laurus_ov02a10_sunny_common.so
 vendor/lib/libchromatix_laurus_ov02a10_sunny_cpp_ds_chromatix.so
 vendor/lib/libchromatix_laurus_ov02a10_sunny_cpp_liveshot.so
@@ -1713,6 +1723,9 @@ vendor/lib/libchromatix_laurus_ov02a10_sunny_cpp_video_weixin.so
 vendor/lib/libchromatix_laurus_ov02a10_sunny_default_preview_bu64297.so
 vendor/lib/libchromatix_laurus_ov02a10_sunny_default_video.so
 vendor/lib/libchromatix_laurus_ov02a10_sunny_default_video_bu64297.so
+vendor/lib/libchromatix_laurus_ov02a10_sunny_HDR_cpp_snapshot.so
+vendor/lib/libchromatix_laurus_ov02a10_sunny_HDR_snapshot.so
+vendor/lib/libchromatix_laurus_ov02a10_sunny_HDR_zsl_preview_dw9800w.so
 vendor/lib/libchromatix_laurus_ov02a10_sunny_hht_cpp_snapshot.so
 vendor/lib/libchromatix_laurus_ov02a10_sunny_panorama_cpp_snapshot.so
 vendor/lib/libchromatix_laurus_ov02a10_sunny_panorama_snapshot.so
@@ -1869,8 +1882,8 @@ vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_snapshot_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_video_weixin.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_zsl_preview.so
-vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_zsl_preview_faceunlock.so
+vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_zsl_preview_panorama.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_zsl_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_global_zsl_video_weixin.so
@@ -1899,8 +1912,8 @@ vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_snapshot_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_video_weixin.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_zsl_preview.so
-vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_zsl_preview_faceunlock.so
+vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_zsl_preview_panorama.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_zsl_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_india_zsl_video_weixin.so
@@ -1912,8 +1925,8 @@ vendor/lib/libchromatix_laurus_s5kgd1_ofilm_snapshot_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_video_weixin.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_zsl_preview.so
-vendor/lib/libchromatix_laurus_s5kgd1_ofilm_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_zsl_preview_faceunlock.so
+vendor/lib/libchromatix_laurus_s5kgd1_ofilm_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_zsl_preview_panorama.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_zsl_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_ofilm_zsl_video_weixin.so
@@ -1959,8 +1972,8 @@ vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_snapshot_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_video_weixin.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_zsl_preview.so
-vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_zsl_preview_faceunlock.so
+vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_zsl_preview_panorama.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_zsl_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_global_zsl_video_weixin.so
@@ -1989,8 +2002,8 @@ vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_snapshot_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_video_weixin.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_zsl_preview.so
-vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_zsl_preview_faceunlock.so
+vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_zsl_preview_panorama.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_zsl_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_india_zsl_video_weixin.so
@@ -2002,8 +2015,8 @@ vendor/lib/libchromatix_laurus_s5kgd1_sunny_snapshot_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_video_weixin.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_zsl_preview.so
-vendor/lib/libchromatix_laurus_s5kgd1_sunny_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_zsl_preview_faceunlock.so
+vendor/lib/libchromatix_laurus_s5kgd1_sunny_zsl_preview_HDR.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_zsl_preview_panorama.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_zsl_video.so
 vendor/lib/libchromatix_laurus_s5kgd1_sunny_zsl_video_weixin.so
@@ -2606,16 +2619,16 @@ vendor/lib/libchromatix_s5k5e9yu05_mono_zsl_preview.so
 vendor/lib/libchromatix_s5k5e9yu05_mono_zsl_video.so
 
 # Camera-configs
-vendor/etc/camera/CFR_para.bin
-vendor/etc/camera/GpuKernelRepo.pb
-vendor/etc/camera/LDC_packdata_xiaomi_F2_src1.dat
-vendor/etc/camera/LDC_packdata_xiaomi_F2_src2.dat
 vendor/etc/camera/beauty_ui9_intelligent_params.config
 vendor/etc/camera/camera_config.xml
+vendor/etc/camera/CFR_para.bin
 vendor/etc/camera/csidtg_camera.xml
 vendor/etc/camera/csidtg_chromatix.xml
+vendor/etc/camera/female_bg.png
+vendor/etc/camera/female_icon.png
 vendor/etc/camera/goldResult_582.bin
 vendor/etc/camera/goldResult_586.bin
+vendor/etc/camera/GpuKernelRepo.pb
 vendor/etc/camera/imx214_chromatix.xml
 vendor/etc/camera/imx230_chromatix.xml
 vendor/etc/camera/imx230_qc2002_chromatix.xml
@@ -2656,8 +2669,14 @@ vendor/etc/camera/laurus_s5kgd1_ofilm_india_chromatix.xml
 vendor/etc/camera/laurus_s5kgd1_sunny_chromatix.xml
 vendor/etc/camera/laurus_s5kgd1_sunny_global_chromatix.xml
 vendor/etc/camera/laurus_s5kgd1_sunny_india_chromatix.xml
+vendor/etc/camera/LDC_packdata_xiaomi_F2_src1.dat
+vendor/etc/camera/LDC_packdata_xiaomi_F2_src2.dat
 vendor/etc/camera/lf_facerank_model.bin
 vendor/etc/camera/libalfpc_tuning.bin
+vendor/etc/camera/male_bg.png
+vendor/etc/camera/male_icon.png
+vendor/etc/camera/Miui-Light.ttf
+vendor/etc/camera/MIUI_Time.ttf
 vendor/etc/camera/model_back.dlc
 vendor/etc/camera/model_front.dlc
 vendor/etc/camera/ov12a10_bear_chromatix.xml
@@ -2677,9 +2696,9 @@ vendor/etc/camera/ov8856_bear_chromatix.xml
 vendor/etc/camera/ov8856_chromatix.xml
 vendor/etc/camera/ov8858_chromatix.xml
 vendor/etc/camera/ov8865_chromatix.xml
+vendor/etc/camera/s5k2l7sx_chromatix.xml
 vendor/etc/camera/s5k2l7_8953_chromatix.xml
 vendor/etc/camera/s5k2l7_chromatix.xml
-vendor/etc/camera/s5k2l7sx_chromatix.xml
 vendor/etc/camera/s5k3l8_chromatix.xml
 vendor/etc/camera/s5k3l8_f3l8yam_chromatix.xml
 vendor/etc/camera/s5k3l8_mono_chromatix.xml
@@ -2690,6 +2709,8 @@ vendor/etc/camera/s5k3m3sm_chromatix.xml
 vendor/etc/camera/s5k3p3sm_chromatix.xml
 vendor/etc/camera/s5k3p8sp_chromatix.xml
 vendor/etc/camera/s5k5e9yu05_mono_chromatix.xml
+vendor/etc/camera/score_bg.png
+vendor/etc/camera/score_icon.png
 vendor/etc/camera/sdm660_camera_global.xml
 vendor/etc/camera/sdm660_camera_india.xml
 vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin
@@ -2723,8 +2744,8 @@ vendor/lib/libmmcamera2_is.so
 vendor/lib/libmmcamera2_isp_modules.so
 vendor/lib/libmmcamera2_mct.so
 vendor/lib/libmmcamera2_mct_shimlayer.so
-vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
@@ -2878,11 +2899,11 @@ vendor/lib/libmmcamera_sony_imx298_eeprom.so
 vendor/lib/libmmcamera_sony_imx378_eeprom.so
 vendor/lib/libmmcamera_stillmore_lib.so
 vendor/lib/libmmcamera_sunny_8865_eeprom.so
-vendor/lib/libmmcamera_sunny_gt24c64_imx298_eeprom.so
-vendor/lib/libmmcamera_sunny_gt24c64_s5k2l7_eeprom.so
-vendor/lib/libmmcamera_sunny_gt24c64_s5k2l7sx_eeprom.so
 vendor/lib/libmmcamera_sunny_gt24c64a_imx362_eeprom.so
 vendor/lib/libmmcamera_sunny_gt24c64a_imx376_eeprom.so
+vendor/lib/libmmcamera_sunny_gt24c64_imx298_eeprom.so
+vendor/lib/libmmcamera_sunny_gt24c64_s5k2l7sx_eeprom.so
+vendor/lib/libmmcamera_sunny_gt24c64_s5k2l7_eeprom.so
 vendor/lib/libmmcamera_sunny_gt24p64b_imx519_eeprom.so
 vendor/lib/libmmcamera_sunny_ov13855_eeprom.so
 vendor/lib/libmmcamera_sunny_q13v06k_eeprom.so
@@ -2941,45 +2962,45 @@ vendor/lib64/libdpmqmihal.so
 
 # DRM
 vendor/bin/qseecomd
-vendor/lib/libGPQTEEC_vendor.so
-vendor/lib/libGPTEE_vendor.so
-vendor/lib/libGPreqcancel.so
-vendor/lib/libGPreqcancel_svc.so
-vendor/lib/libQSEEComAPI.so
-vendor/lib/libSecureUILib.so
-vendor/lib/libStDrvInt.so
 vendor/lib/libcpion.so
 vendor/lib/libcppf.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
+vendor/lib/libGPQTEEC_vendor.so
+vendor/lib/libGPreqcancel.so
+vendor/lib/libGPreqcancel_svc.so
+vendor/lib/libGPTEE_vendor.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libqisl.so
+vendor/lib/libQSEEComAPI.so
 vendor/lib/librmp.so
 vendor/lib/librpmb.so
 vendor/lib/libsdedrm.so
 vendor/lib/libsecureui.so
+vendor/lib/libSecureUILib.so
 vendor/lib/libsecureui_svcsock.so
 vendor/lib/libssd.so
+vendor/lib/libStDrvInt.so
 vendor/lib/libtzdrmgenprov.so
-vendor/lib64/libGPQTEEC_vendor.so
-vendor/lib64/libGPTEE_vendor.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libStDrvInt.so
 vendor/lib64/libcpion.so
 vendor/lib64/libcppf.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
+vendor/lib64/libGPQTEEC_vendor.so
+vendor/lib64/libGPreqcancel.so
+vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libqisl.so
+vendor/lib64/libQSEEComAPI.so
 vendor/lib64/librmp.so
 vendor/lib64/librpmb.so
 vendor/lib64/libsdedrm.so
 vendor/lib64/libsecureui.so
+vendor/lib64/libSecureUILib.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
+vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 
 # DRM-Widevine
@@ -3100,10 +3121,10 @@ vendor/lib64/vendor.qti.data.factory@1.1.so
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 
 # Fido
-vendor/lib/libFIDOKeyProvisioning.so
 vendor/lib/libFidoCrypto_vendor.so
-vendor/lib64/libFIDOKeyProvisioning.so
+vendor/lib/libFIDOKeyProvisioning.so
 vendor/lib64/libFidoCrypto_vendor.so
+vendor/lib64/libFIDOKeyProvisioning.so
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
@@ -3121,23 +3142,23 @@ vendor/lib64/vendor.qti.hardware.fingerprintext@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 
 # Firmware
+vendor/firmware/a225p5_pm4.fw
 vendor/firmware/a225_pfp.fw
 vendor/firmware/a225_pm4.fw
-vendor/firmware/a225p5_pm4.fw
 vendor/firmware/a300_pfp.fw
 vendor/firmware/a300_pm4.fw
 vendor/firmware/a330_pfp.fw
 vendor/firmware/a330_pm4.fw
 vendor/firmware/a420_pfp.fw
 vendor/firmware/a420_pm4.fw
-vendor/firmware/a530_gpmu.fw2
-vendor/firmware/a530_pfp.fw
-vendor/firmware/a530_pm4.fw
 vendor/firmware/a530v1_pfp.fw
 vendor/firmware/a530v1_pm4.fw
 vendor/firmware/a530v2_seq.fw2
 vendor/firmware/a530v3_gpmu.fw2
 vendor/firmware/a530v3_seq.fw2
+vendor/firmware/a530_gpmu.fw2
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
 vendor/firmware/a540_gpmu.fw2
 vendor/firmware/a608_rgmu.bin
 vendor/firmware/a610_zap.b00
@@ -3152,8 +3173,6 @@ vendor/firmware/focaltech-ft3518-sumsung.ini
 vendor/firmware/gtx8_limits.csv
 vendor/firmware/leia_pfp_470.fw
 vendor/firmware/leia_pm4_470.fw
-vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
-vendor/firmware/wlan/qca_cld/wlan_mac.bin
 
 # GPS
 etc/permissions/com.qti.location.sdk.xml
@@ -3192,11 +3211,11 @@ vendor/lib/libgeofence.so
 vendor/lib/libizat_client_api.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
-vendor/lib/libloc_api_v02.so
-vendor/lib/libloc_core.so
-vendor/lib/liblocation_api.so
 vendor/lib/liblocationservice.so
 vendor/lib/liblocationservice_glue.so
+vendor/lib/liblocation_api.so
+vendor/lib/libloc_api_v02.so
+vendor/lib/libloc_core.so
 vendor/lib/liblowi_client.so
 vendor/lib/liblowi_wifihal.so
 vendor/lib/libslimclient.so
@@ -3216,11 +3235,11 @@ vendor/lib64/libgeofence.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
-vendor/lib64/libloc_api_v02.so
-vendor/lib64/libloc_core.so
-vendor/lib64/liblocation_api.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
+vendor/lib64/liblocation_api.so
+vendor/lib64/libloc_api_v02.so
+vendor/lib64/libloc_core.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libqdma_file_agent.so
@@ -3255,25 +3274,23 @@ vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libQTapGLES.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
+vendor/lib/egl/libQTapGLES.so
 vendor/lib/hw/vulkan.trinket.so
-vendor/lib/libC2D2.so
-vendor/lib/libCB.so
-vendor/lib/libEGL_adreno.so
-vendor/lib/libOpenCL.so
-vendor/lib/libRSDriver_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
+vendor/lib/libC2D2.so
 vendor/lib/libc2d30_bltlib.so
+vendor/lib/libCB.so
 vendor/lib/libgsl.so
 vendor/lib/libhdr_tm.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
+vendor/lib/libOpenCL.so
 vendor/lib/libpvr.so
-vendor/lib/libq3dtools_adreno.so
 vendor/lib/libqseed3.so
+vendor/lib/libRSDriver_adreno.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libsdm-color.so
@@ -3284,25 +3301,23 @@ vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/hw/vulkan.trinket.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libCB.so
-vendor/lib64/libEGL_adreno.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libbccQTI.so
+vendor/lib64/libC2D2.so
 vendor/lib64/libc2d30_bltlib.so
+vendor/lib64/libCB.so
 vendor/lib64/libgsl.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
+vendor/lib64/libOpenCL.so
 vendor/lib64/libpvr.so
-vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/libqseed3.so
+vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libsdm-color.so
@@ -3431,27 +3446,31 @@ vendor/lib64/liblistensoundmodel2.so
 # Media
 lib/extractors/libmmparser.so
 lib/libFileMux.so
-lib/libOmxMux.so
 lib/libmmosal.so
 lib/libmmparser_lite.so
 lib/libmmrtpdecoder.so
 lib/libmmrtpencoder.so
+lib/libOmxMux.so
 lib/vendor.qti.hardware.vpp@1.1.so
 lib/vendor.qti.hardware.vpp@1.2.so
 lib64/extractors/libmmparser.so
 lib64/libFileMux.so
-lib64/libOmxMux.so
 lib64/libmmosal.so
 lib64/libmmparser_lite.so
 lib64/libmmrtpdecoder.so
 lib64/libmmrtpencoder.so
+lib64/libOmxMux.so
 lib64/vendor.qti.hardware.vpp@1.1.so
 lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
+vendor/lib/libdsd2pcm.so
 vendor/lib/libFlacSwDec.so
 vendor/lib/libI420colorconvert.so
+vendor/lib/libmm-color-convertor.so
+vendor/lib/libmmosal_proprietary.so
 vendor/lib/libMpeg4SwEncoder.so
+vendor/lib/libmulawdec.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
@@ -3465,10 +3484,6 @@ vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxWmaDec.so
-vendor/lib/libdsd2pcm.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libmmosal_proprietary.so
-vendor/lib/libmulawdec.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib/libvqzip.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
@@ -3478,7 +3493,10 @@ vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libFlacSwDec.so
 vendor/lib64/libI420colorconvert.so
+vendor/lib64/libmm-color-convertor.so
+vendor/lib64/libmmosal_proprietary.so
 vendor/lib64/libMpeg4SwEncoder.so
+vendor/lib64/libmulawdec.so
 vendor/lib64/libOmxAacDec.so
 vendor/lib64/libOmxAlacDec.so
 vendor/lib64/libOmxAlacDecSw.so
@@ -3490,13 +3508,13 @@ vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxWmaDec.so
-vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libmmosal_proprietary.so
-vendor/lib64/libmulawdec.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 
 # Media-Hardware
+vendor/lib/libarbitrarybytes.so
+vendor/lib/libc2dcolorconvert.so
+vendor/lib/libmm-omxcore.so
 vendor/lib/libOmxAacEnc.so
 vendor/lib/libOmxAmrEnc.so
 vendor/lib/libOmxCore.so
@@ -3507,11 +3525,11 @@ vendor/lib/libOmxSwVdec.so
 vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVdec.so
 vendor/lib/libOmxVenc.so
-vendor/lib/libarbitrarybytes.so
-vendor/lib/libc2dcolorconvert.so
-vendor/lib/libmm-omxcore.so
 vendor/lib/libplatformconfig.so
 vendor/lib/libstagefrighthw.so
+vendor/lib64/libarbitrarybytes.so
+vendor/lib64/libc2dcolorconvert.so
+vendor/lib64/libmm-omxcore.so
 vendor/lib64/libOmxAacEnc.so
 vendor/lib64/libOmxAmrEnc.so
 vendor/lib64/libOmxCore.so
@@ -3522,9 +3540,6 @@ vendor/lib64/libOmxSwVdec.so
 vendor/lib64/libOmxSwVencMpeg4.so
 vendor/lib64/libOmxVdec.so
 vendor/lib64/libOmxVenc.so
-vendor/lib64/libarbitrarybytes.so
-vendor/lib64/libc2dcolorconvert.so
-vendor/lib64/libmm-omxcore.so
 vendor/lib64/libplatformconfig.so
 vendor/lib64/libstagefrighthw.so
 
@@ -3629,13 +3644,13 @@ vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi.so
+vendor/lib/libqmiservices.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
-vendor/lib/libqmiservices.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
@@ -3645,13 +3660,13 @@ vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqmi.so
+vendor/lib64/libqmiservices.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
-vendor/lib64/libqmiservices.so
 
 # Qdutils
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
@@ -3670,18 +3685,18 @@ vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Radio
--app/QtiTelephonyService/QtiTelephonyService.apk
 -app/datastatusnotification/datastatusnotification.apk
 -app/embms/embms.apk
+-app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/embms.xml
 etc/permissions/privapp-permissions-qti.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
 etc/sysconfig/qti_whitelist.xml
-framework/QtiTelephonyServicelibrary.jar
 framework/embmslibrary.jar
 framework/qcrilhook.jar
 framework/qti-telephony-common.jar
+framework/QtiTelephonyServicelibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/hw/qcrild
@@ -3696,7 +3711,6 @@ vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/init/qcrild.rc
-vendor/lib/lib_remote_simlock.so
 vendor/lib/libconfigdb.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/liblqe.so
@@ -3721,12 +3735,13 @@ vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/librilqmiservices.so
 vendor/lib/libsettings.so
 vendor/lib/libsystem_health_mon.so
+vendor/lib/lib_remote_simlock.so
 vendor/lib/qcrild_librilutils.so
 vendor/lib/vendor.qti.hardware.radio.am@1.0.so
 vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib/vendor.qti.hardware.radio.lpa@1.0.so
-vendor/lib/vendor.qti.hardware.radio.qcriNvOpt@1.0.so
 vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so
+vendor/lib/vendor.qti.hardware.radio.qcriNvOpt@1.0.so
 vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0.so
 vendor/lib/vendor.qti.hardware.radio.qtiradio@2.0.so
 vendor/lib/vendor.qti.hardware.radio.qtiradio@2.1.so
@@ -3735,7 +3750,6 @@ vendor/lib/vendor.qti.hardware.radio.uim@1.0.so
 vendor/lib/vendor.qti.hardware.radio.uim@1.1.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so
-vendor/lib64/lib_remote_simlock.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/liblqe.so
@@ -3760,12 +3774,13 @@ vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/librilqmiservices.so
 vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
+vendor/lib64/lib_remote_simlock.so
 vendor/lib64/qcrild_librilutils.so
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.qcriNvOpt@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.qcriNvOpt@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so
@@ -3823,10 +3838,10 @@ lib64/vendor.qti.ims.callinfo@1.0.so
 lib64/vendor.qti.ims.rcsconfig@1.0.so
 lib64/vendor.qti.imsrtpservice@1.0.so
 -priv-app/ims/ims.apk
-vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
+vendor/bin/ims_rtp_daemon
 vendor/lib/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@2.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@2.1.so
@@ -3936,8 +3951,6 @@ vendor/lib/libsubsystem_control.so
 vendor/lib64/libSubSystemShutdown.so
 vendor/lib64/libsubsystem_control.so
 
-# Samsung
-
 # Seccam
 vendor/lib/vendor.qti.hardware.seccam@1.0.so
 vendor/lib64/vendor.qti.hardware.seccam@1.0.so
@@ -4013,8 +4026,8 @@ vendor/lib64/sensors.ssc.so
 # Soter
 framework/vendor.qti.hardware.soter-V1.0-java.jar
 lib64/vendor.qti.hardware.soter@1.0.so
-vendor/bin/SoterProvisioningTool
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
+vendor/bin/SoterProvisioningTool
 vendor/bin/vendor.qti.hardware.soter@1.0-provision
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib/hw/vendor.qti.hardware.soter@1.0-impl.so
@@ -4029,15 +4042,19 @@ vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Thermal
+vendor/bin/hw/android.hardware.thermal@1.0-service
 vendor/bin/thermal-engine
+vendor/etc/init/android.hardware.thermal@1.0-service.rc
 vendor/etc/thermal-engine.conf
+vendor/lib/hw/android.hardware.thermal@1.0-impl.so
+vendor/lib/hw/thermal.trinket.so
 -vendor/lib/libthermalclient.so
+vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
+vendor/lib64/hw/thermal.trinket.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalfeature.so
 
 # Thermal-Hardware
-vendor/lib/hw/thermal.trinket.so
-vendor/lib64/hw/thermal.trinket.so
 
 # Time
 -vendor/app/TimeService/TimeService.apk
@@ -4165,12 +4182,9 @@ vendor/bin/wigignpt
 
 # Misc
 -vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk
+-vendor/app/pasrservice/pasrservice.apk
 -vendor/app/SSGTelemetryService/SSGTelemetryService.apk
 -vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk
--vendor/app/pasrservice/pasrservice.apk
-vendor/bin/KmInstallKeybox
-vendor/bin/PktRspTest
-vendor/bin/StoreKeybox
 vendor/bin/athdiag
 vendor/bin/charge_logger
 vendor/bin/cplay
@@ -4192,6 +4206,7 @@ vendor/bin/hw/interfaces.factoryInterface@1.0-service
 vendor/bin/iperf
 vendor/bin/iw
 vendor/bin/iwlist
+vendor/bin/KmInstallKeybox
 vendor/bin/lowi_test
 vendor/bin/mm-qjpeg-dec-test
 vendor/bin/mm-qjpeg-enc-test
@@ -4201,6 +4216,7 @@ vendor/bin/mm-vidc-omx-test
 vendor/bin/myftm
 vendor/bin/oem_server
 vendor/bin/pktlogconf
+vendor/bin/PktRspTest
 vendor/bin/qdcmss
 vendor/bin/qdss_qmi_helper
 vendor/bin/qjpeg-dma-test
@@ -4209,14 +4225,14 @@ vendor/bin/qseecom_sample_client
 vendor/bin/secure_ui_sample_client
 vendor/bin/sigma_dut
 vendor/bin/spectraltool
+vendor/bin/StoreKeybox
+vendor/bin/testapp_diag_senddata
 vendor/bin/test_diag
 vendor/bin/test_module_pproc
-vendor/bin/testapp_diag_senddata
 vendor/bin/vendor_cmd_tool
 vendor/bin/wt_tee_check
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
-vendor/etc/SVIConfig.xml
 vendor/etc/ftm_test_config_qrd
 vendor/etc/ftm_test_config_sm6150-tavil-snd-card
 vendor/etc/ftm_test_config_trinket-tasha-snd-card
@@ -4228,7 +4244,10 @@ vendor/etc/lm/AdaptLaunchFeature.xml
 vendor/etc/lm/AppClassifierFeature.xml
 vendor/etc/lm/GameOptimizationFeature.xml
 vendor/etc/mmigroup/CommonParam.json
+vendor/etc/mmigroup/customerAta.json
+vendor/etc/mmigroup/factoryInterfaceConfig.json
 vendor/etc/mmigroup/FQC.json
+vendor/etc/mmigroup/MainMenuConfig.json
 vendor/etc/mmigroup/MMI2.json
 vendor/etc/mmigroup/MMI2_1.json
 vendor/etc/mmigroup/MMIGroupADBCmdTest.json
@@ -4248,9 +4267,6 @@ vendor/etc/mmigroup/MMIGroupPcbaAta.json
 vendor/etc/mmigroup/MMIGroupPcbaManual.json
 vendor/etc/mmigroup/MMIGroupSensorAta.json
 vendor/etc/mmigroup/MMIGroupSensorManual.json
-vendor/etc/mmigroup/MainMenuConfig.json
-vendor/etc/mmigroup/customerAta.json
-vendor/etc/mmigroup/factoryInterfaceConfig.json
 vendor/etc/mmigroup/numraw/enum1.mp3
 vendor/etc/mmigroup/numraw/enum2.mp3
 vendor/etc/mmigroup/numraw/enum3.mp3
@@ -4276,14 +4292,16 @@ vendor/etc/screen_light_ind.xml
 vendor/etc/spk_cal_pinknoise.wav
 vendor/etc/spk_cal_silence.wav
 vendor/etc/spk_cal_whitenoise.wav
+vendor/etc/SVIConfig.xml
 vendor/etc/wt_cust_audio.xml
-vendor/lib/libGLESv2_adreno.so
 vendor/lib/libalCFR.so
 vendor/lib/libalRnBRT_GL_GBWRAPPER.so
 vendor/lib/libcert_parse.wpa_s.so
 vendor/lib/libdiagbridge.so
 vendor/lib/libdiagjni.so
+vendor/lib/libdng_sdk.so
 vendor/lib/libfastcrc.so
+vendor/lib/libft2vendor.so
 vendor/lib/libloc2jnibridge.so
 vendor/lib/liboem.so
 vendor/lib/libqcbor.so
@@ -4291,20 +4309,20 @@ vendor/lib/libsi.so
 vendor/lib/libsns_registry_skel.so
 vendor/lib/libsysmon_cdsp_skel.so
 vendor/lib/libwapi_cert.so
+vendor/lib/miwatermark.so
 vendor/lib64/interfaces.customNvService@1.0-adapter-helper.so
 vendor/lib64/interfaces.customNvService@1.0.so
 vendor/lib64/interfaces.factoryAta@1.0-adapter-helper.so
 vendor/lib64/interfaces.factoryAta@1.0.so
 vendor/lib64/interfaces.factoryInterface@1.0-adapter-helper.so
 vendor/lib64/interfaces.factoryInterface@1.0.so
-vendor/lib64/libFactoryHALCommon.so
-vendor/lib64/libFactoryHALSensor.so
-vendor/lib64/libFactoryMetaAta.so
-vendor/lib64/libGLESv2_adreno.so
 vendor/lib64/libappclassifier.so
 vendor/lib64/libcert_parse.wpa_s.so
 vendor/lib64/libdiagbridge.so
 vendor/lib64/libdiagjni.so
+vendor/lib64/libFactoryHALCommon.so
+vendor/lib64/libFactoryHALSensor.so
+vendor/lib64/libFactoryMetaAta.so
 vendor/lib64/libgameoptfeature.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libloc2jnibridge.so
